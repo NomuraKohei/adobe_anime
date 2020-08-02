@@ -15,41 +15,32 @@
 <!-- write your code here -->
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="adobe_anime.js"></script>
-<script>
-var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function init() {
-	canvas = document.getElementById("canvas");
-	anim_container = document.getElementById("animation_container");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("D2DA31D1DC6D4CCDBB511B83778C75EA");
-	var lib=comp.getLibrary();
-	handleComplete({},comp);
-}
-function handleComplete(evt,comp) {
-	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
-	var ss=comp.getSpriteSheet();
-	exportRoot = new lib.名称未設定1();
-	stage = new lib.Stage(canvas);	
-	//Registers the "tick" event listener.
-	fnStartAnimation = function() {
-		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
-	}	    
-	//Code to support hidpi screens and responsive scaling.
-	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
-	fnStartAnimation();
-}
-</script>
-<!-- write your code here -->
 </head>
-<body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:640px; height:480px">
-		<canvas id="canvas" width="640" height="480" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:640px; height:480px; position: absolute; left: 0px; top: 0px; display: block;">
-		</div>
-	</div>
-</body>
+<body>
+<section>
+    <h1>JS-Pro.</h1>
+    <p>Javascript特化型オンライン学習サイト</p>
+</section>
+<section>
+    <h2>JS-Pro's Concept</h2>
+</section>
+<section>
+    <h3>プログラミング言語を "使えるようになる"まで学習をサポートします。</h3>
+    <p>オンラインプログラミング学習サイトのほとんどは複数言語を用意しています。複数の言語の幅を広く学べるというメリットはあるものの、実用レベルまでスキルを磨くことは難しいです。本サービスでは、Javascriptという一つの言語に特化することで、プログラミング言語を"使える"までサポートします。
+    </p>
+</section>
+<section>
+    <h2>Features</h2>
+</section>
+<section>
+    <h3>効率的な学習でJavaScriptを自由自在に。</h3>
+    <div>
+        <img src="a.jpg">
+        <section>
+            <h4>スライドで快適な学習を。<h4>
+            <p>JS-Pro.は図を多用したスライド形式のインプット学習を行います。 イメージが掴みやすくなるので快適な学習体験を提供します。</p>
+        </section>
+    </div>
+</section>
+
 </html>
